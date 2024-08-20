@@ -1,13 +1,9 @@
-type Employee = {
-  readonly id: number;
-  name: string;
-  retire: (date: Date) => void;
-};
+function kgTobs(weight: number | string) {
+    if (typeof weight === 'number')
+        return weight * 2.2
+    else 
+        return parseInt(weight) * 2.2
+}
 
-let employee: Employee = {
-  id: 1,
-  name: "Homayoun",
-  retire: (date: Date) => {
-    console.log(date);
-  },
-};
+kgTobs(1)
+kgTobs('10kg')

@@ -65,3 +65,17 @@ let employee: Employee = {
   },
 };
 ```
+
+### type union
+describes a value that can be one of several types
+```javascript 
+function kgTobs(weight: number | string) {
+    if (typeof weight === 'number')
+        return weight * 2.2
+    else 
+        return parseInt(weight) * 2.2
+}
+
+kgTobs(1)
+kgTobs('10kg')
+```

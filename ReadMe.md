@@ -11,6 +11,10 @@ Javascript and Typescript both of theme have some build in types like this table
 | undefined  | enum       |
 | objec      | tuple      |
 
+## Best Practice 
+
+- allways set type for parameter and return value of your function
+
 ## type any
 
 It allows you to assign a variable or function parameter to be of literally any type

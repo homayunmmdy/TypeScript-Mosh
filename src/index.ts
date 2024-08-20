@@ -1,10 +1,11 @@
-// const small = 1;
-// const medium = 2;
-// const large = 3;
+// as best practice allways set type for parameter and return value of your function
 
-const enum Size {
-  Small = 1,
-  Medium,
-  Large,
+function calculateTax(income: number, taxYear= 2024): number {
+  if (taxYear < 2024) {
+    return income * 1.2;
+  } else {
+    return income * 1.3;
+  }
 }
-let mySize: Size = Size.Medium;
+
+calculateTax(10_000);

@@ -29,3 +29,16 @@ for key and value more than 2 items will be hard to read and understand the code
 ```javascript
 let user: [number, string] = [1, "Homayoun"];
 ```
+
+## type enum
+
+By default an enum is number based, starting at zero, and each option is assigned an increment by one. This is useful when the value is not important.
+
+```javascript 
+enum Size {
+  Small = 1, // you can customize the starter
+  Medium, //this will incress by one and it will be 2
+  Large, // also one this will incress by one and it will be 3
+}
+
+```

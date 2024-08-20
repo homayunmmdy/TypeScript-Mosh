@@ -1,3 +1,3 @@
 "use strict";
-let user = [1, "Homayoun"];
+let mySize = 2;
 //# sourceMappingURL=index.js.map

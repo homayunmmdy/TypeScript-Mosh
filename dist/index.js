@@ -1,10 +1,17 @@
 "use strict";
-function kgTobs(weight) {
-    if (typeof weight === 'number')
-        return weight * 2.2;
-    else
-        return parseInt(weight) * 2.2;
+class Account {
+    constructor(id, owner, balance) {
+        this.id = id;
+        this.owner = owner;
+        this.balance = balance;
+    }
+    deposite(amount) {
+        if (amount <= 0) {
+            throw new Error('Invalid amounr');
+        }
+        else {
+            this.balance += amount;
+        }
+    }
 }
-kgTobs(1);
-kgTobs('10kg');
 //# sourceMappingURL=index.js.map

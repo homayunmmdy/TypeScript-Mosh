@@ -7,11 +7,14 @@ class Account {
     }
     deposite(amount) {
         if (amount <= 0) {
-            throw new Error('Invalid amounr');
+            throw new Error("Invalid amounr");
         }
         else {
             this.balance += amount;
         }
     }
 }
+let account = new Account(1, "Homayoun", 0);
+account.deposite(100);
+console.log(account.balance);
 //# sourceMappingURL=index.js.map

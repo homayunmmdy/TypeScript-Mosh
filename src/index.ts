@@ -1,14 +1,4 @@
-type Draggable = {
-  drag: () => void;
-};
+// Literal (excat , specific)
+type Quanitiy = 50 | 100
+let quanitiy: Quanitiy = 100;
 
-type Resizable = {
-  resize: () => void;
-};
-
-type UIWidget = Draggable & Resizable
-
-let textBox: UIWidget = {
-    drag: () => {},
-    resize: () => {}
-}

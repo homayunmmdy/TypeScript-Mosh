@@ -11,7 +11,7 @@ Javascript and Typescript both of theme have some build in types like this table
 | undefined  | enum       |
 | objec      | tuple      |
 
-## Best Practice 
+## Best Practice
 
 - allways set type for parameter and return value of your function
 
@@ -38,7 +38,7 @@ let user: [number, string] = [1, "Homayoun"];
 
 By default an enum is number based, starting at zero, and each option is assigned an increment by one. This is useful when the value is not important.
 
-```javascript 
+```javascript
 enum Size {
   Small = 1, // you can customize the starter
   Medium, //this will incress by one and it will be 2
@@ -47,12 +47,13 @@ enum Size {
 
 ```
 
-# here are list of the advance types in the typescript 
+# here are list of the advance types in the typescript
 
 ## type alias
 
 allows creating a reference to a type using another name
-```javascript 
+
+```javascript
 type Employee = {
   readonly id: number;
   name: string;
@@ -69,34 +70,44 @@ let employee: Employee = {
 ```
 
 ## type union
+
 describes a value that can be one of several types
-```javascript 
+
+```javascript
 function kgTobs(weight: number | string) {
-    if (typeof weight === 'number')
-        return weight * 2.2
-    else 
-        return parseInt(weight) * 2.2
+  if (typeof weight === "number") return weight * 2.2;
+  else return parseInt(weight) * 2.2;
 }
 
-kgTobs(1)
-kgTobs('10kg')
+kgTobs(1);
+kgTobs("10kg");
 ```
+
 ## intersection type
+
 combines multiple types into one
 
-```javascript 
+```javascript
 type Draggable = {
-  drag: () => void;
+  drag: () => void,
 };
 
 type Resizable = {
-  resize: () => void;
+  resize: () => void,
 };
 
-type UIWidget = Draggable & Resizable
+type UIWidget = Draggable & Resizable;
 
 let textBox: UIWidget = {
-    drag: () => {},
-    resize: () => {}
-}
+  drag: () => {},
+  resize: () => {},
+};
+```
+
+## type Literal
+
+let you indicate that an expression is equal to some specific primitive value
+
+```javascript
+type Metric = "cm" | "inch";
 ```

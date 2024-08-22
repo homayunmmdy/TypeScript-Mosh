@@ -111,3 +111,25 @@ let you indicate that an expression is equal to some specific primitive value
 ```javascript
 type Metric = "cm" | "inch";
 ```
+
+# Operations 
+
+## optional chaining operator (?.)
+useful to access a property of an object which may be null or undefined 
+
+```javascript 
+let names : string[] | null = null
+names?.[0]
+```
+
+## nullish coalescing ( ?? )
+a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined , and otherwise returns its left-hand side operand.
+
+```javascript 
+let speed: number | null = null;
+let ride = {
+  // Falsy (undefined , null , '' , false , 0)
+  // Nullish calescing operator
+  speed: speed ?? 30,
+};
+```

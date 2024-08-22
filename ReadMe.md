@@ -25,21 +25,27 @@ level = 1;
 level = "a";
 ```
 
-## type unknow 
+## type unknow
+
 when a value might have any type, or when it is not convenient to use a more specific type
 
-## type never 
+## type never
+
 represents the type of values that never occur.
-```javascript 
+
+```javascript
 function processEvents(): never {
-  while (true) {console.log("processing...")}
+  while (true) {
+    console.log("processing...");
+  }
 }
 processEvents();
 console.log("hi");
-
 ```
-for example in this code hi log will never run because the previous 
+
+for example in this code hi log will never run because the previous
 function is never stop
+
 ## type tuple
 
 It provides a way to represent the ordered set of the element types for certain elements in a TypeScript array. best practice is use this only
@@ -127,20 +133,22 @@ let you indicate that an expression is equal to some specific primitive value
 type Metric = "cm" | "inch";
 ```
 
-# Operations 
+# Operations
 
 ## optional chaining operator (?.)
-useful to access a property of an object which may be null or undefined 
 
-```javascript 
-let names : string[] | null = null
-names?.[0]
+useful to access a property of an object which may be null or undefined
+
+```javascript
+let names: string[] | null = null;
+names?.[0];
 ```
 
 ## nullish coalescing ( ?? )
+
 a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined , and otherwise returns its left-hand side operand.
 
-```javascript 
+```javascript
 let speed: number | null = null;
 let ride = {
   // Falsy (undefined , null , '' , false , 0)
@@ -150,10 +158,27 @@ let ride = {
 ```
 
 # type assertion
+
 mechanism which tells the compiler about the type of a variable.in the example it is mean that just show inputelement as option and don't show others
 
-```javascript 
+```javascript
 let phone = document.getElementById('phone') as HTMLInputElement;
 
 phone.value
+```
+
+## Index Signature
+
+a way to define the Shape of fields which are not known ahead of time
+
+```javascript
+class SeatAssignment {
+  // A1 , A2, ...
+  // Homayoun , Mosh , ...
+  [seatNumber : string]: string;
+}
+
+let seats = new SeatAssignment();
+seats.A1 = 'Homayoun';
+seats.A2 = 'Mosh'
 ```

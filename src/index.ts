@@ -1,30 +1,9 @@
-class Account {
-  nickname?: string;
-
-  constructor(
-    public readonly id: number,
-    public owner: string,
-    private _balance: number
-  ) {}
-
-  deposite(amount: number): void {
-    if (amount <= 0) {
-      throw new Error("Invalid amounr");
-    } else {
-      this._balance += amount;
-    }
-  }
-
-  private calculateTax() {
-    return this._balance - 1.2;
-  }
-
-  get balance(): number {
-    return this.calculateTax();
-  }
-
+class SeatAssignment {
+  // A1 , A2, ...
+  // Homayoun , Mosh , ...
+  [seatNumber : string]: string;
 }
 
-let account = new Account(1, "Homayoun", 0);
-account.deposite(100);
-console.log(account.balance);
+let seats = new SeatAssignment();
+seats.A1 = 'Homayoun';
+seats.A2 = 'Mosh'

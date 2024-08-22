@@ -25,6 +25,9 @@ level = 1;
 level = "a";
 ```
 
+## type unknow 
+when a value might have any type, or when it is not convenient to use a more specific type
+
 ## type tuple
 
 It provides a way to represent the ordered set of the element types for certain elements in a TypeScript array. best practice is use this only

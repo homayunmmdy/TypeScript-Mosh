@@ -47,6 +47,8 @@ enum Size {
 
 ```
 
+# here are list of the advance types in the typescript 
+
 ## type alias
 
 allows creating a reference to a type using another name
@@ -66,7 +68,7 @@ let employee: Employee = {
 };
 ```
 
-### type union
+## type union
 describes a value that can be one of several types
 ```javascript 
 function kgTobs(weight: number | string) {
@@ -78,4 +80,23 @@ function kgTobs(weight: number | string) {
 
 kgTobs(1)
 kgTobs('10kg')
+```
+## intersection type
+combines multiple types into one
+
+```javascript 
+type Draggable = {
+  drag: () => void;
+};
+
+type Resizable = {
+  resize: () => void;
+};
+
+type UIWidget = Draggable & Resizable
+
+let textBox: UIWidget = {
+    drag: () => {},
+    resize: () => {}
+}
 ```

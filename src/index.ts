@@ -1,3 +1,5 @@
-let phone = document.getElementById('phone') as HTMLInputElement;
-
-phone.value
+function processEvents(): never {
+  while (true) {console.log("processing...")}
+}
+processEvents();
+console.log("hi");

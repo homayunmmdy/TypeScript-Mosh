@@ -28,6 +28,18 @@ level = "a";
 ## type unknow 
 when a value might have any type, or when it is not convenient to use a more specific type
 
+## type never 
+represents the type of values that never occur.
+```javascript 
+function processEvents(): never {
+  while (true) {console.log("processing...")}
+}
+processEvents();
+console.log("hi");
+
+```
+for example in this code hi log will never run because the previous 
+function is never stop
 ## type tuple
 
 It provides a way to represent the ordered set of the element types for certain elements in a TypeScript array. best practice is use this only

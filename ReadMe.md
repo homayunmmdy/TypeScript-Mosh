@@ -133,3 +133,12 @@ let ride = {
   speed: speed ?? 30,
 };
 ```
+
+# type assertion
+mechanism which tells the compiler about the type of a variable.in the example it is mean that just show inputelement as option and don't show others
+
+```javascript 
+let phone = document.getElementById('phone') as HTMLInputElement;
+
+phone.value
+```

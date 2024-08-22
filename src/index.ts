@@ -19,11 +19,12 @@ class Account {
     return this._balance - 1.2;
   }
 
-  getBalance(): number {
+  get balance(): number {
     return this.calculateTax();
   }
+
 }
 
 let account = new Account(1, "Homayoun", 0);
 account.deposite(100);
-console.log(account.getBalance());
+console.log(account.balance);

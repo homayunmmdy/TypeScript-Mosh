@@ -1,26 +1,12 @@
 "use strict";
-class Account {
-    constructor(id, owner, balance) {
-        this.id = id;
-        this.owner = owner;
-        this._balance = balance;
-    }
-    deposite(amount) {
-        if (amount <= 0) {
-            throw new Error("Invalid amounr");
-        }
-        else {
-            this._balance += amount;
-        }
-    }
-    calculateTax() {
-        return this._balance - 1.2;
-    }
-    getBalance() {
-        return this.calculateTax();
-    }
+class Ride {
+    start() { Ride.activeRides++; }
+    stop() { Ride.activeRides--; }
 }
-let account = new Account(1, "Homayoun", 0);
-account.deposite(100);
-console.log(account.getBalance());
+Ride.activeRides = 0;
+let ride1 = new Ride();
+ride1.start();
+let ride2 = new Ride();
+ride2.start();
+console.log(Ride.activeRides);
 //# sourceMappingURL=index.js.map

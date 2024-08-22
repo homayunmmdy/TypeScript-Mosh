@@ -182,3 +182,27 @@ let seats = new SeatAssignment();
 seats.A1 = 'Homayoun';
 seats.A2 = 'Mosh'
 ```
+
+## static memeber
+a property that is shared across all instances of a class, and can be accessed without creating an instance of the class.
+
+```javascript 
+class Ride {
+  private static _activeRides: number = 0;
+  
+  start() {Ride._activeRides++}
+  stop() {Ride._activeRides--}
+
+  static get activeRides() {
+    return Ride._activeRides
+  }
+}
+
+
+let ride1 = new Ride();
+ride1.start()
+let ride2 = new Ride();
+ride2.start()
+
+console.log(Ride.activeRides)
+```

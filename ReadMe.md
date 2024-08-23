@@ -184,12 +184,13 @@ seats.A2 = 'Mosh'
 ```
 
 ## static memeber
+
 a property that is shared across all instances of a class, and can be accessed without creating an instance of the class.
 
-```javascript 
+```javascript
 class Ride {
   private static _activeRides: number = 0;
-  
+
   start() {Ride._activeRides++}
   stop() {Ride._activeRides--}
 
@@ -205,4 +206,33 @@ let ride2 = new Ride();
 ride2.start()
 
 console.log(Ride.activeRides)
+```
+
+## inheritance
+
+passing down characteristics from a parent to a child so that a new piece of code can reuse and build upon the features of an existing one
+
+```javascript
+class Person {
+  constructor(public firstName: string, public lastName: string) {}
+
+  get fullName() {
+    return this.firstName + "" + this.lastName;
+  }
+
+  walk() {
+    console.log("walking");
+  }
+}
+
+class Student extends Person {
+  constructor(public studentId: number, firstName: string, lastName: string) {
+    super(firstName, lastName);
+  }
+  takeTest() {
+    console.log("taking a test")
+  }
+}
+
+let student = new Student(1, 'john', 'smith');
 ```

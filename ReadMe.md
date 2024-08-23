@@ -396,3 +396,18 @@ interface Calendar {
   removeEvent(): void;
 }
 ```
+
+
+# Generic 
+
+# generic classes
+enable writing code that can work with a variety of data types while maintaining type safety
+
+```javascript 
+class KeyValuePair<K, V> {
+  constructor(public key: K, public value: V) {}
+}
+
+let pair = new KeyValuePair<number, string>(1, "Apple");
+
+```

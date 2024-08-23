@@ -1,24 +1,5 @@
-// abstract class Calendar {
-//   constructor(public name: string) {}
-//   abstract addEvent(): void;
-//   abstract removeEvent(): void;
-// }
-interface Calendar {
-  name: string;
-  addEvent(): void;
-  removeEvent(): void;
+class KeyValuePair<K, V> {
+  constructor(public key: K, public value: V) {}
 }
 
-interface CloundCalandar extends Calendar {
-  sync(): void;
-}
-
-class GoogleCalander implements Calendar {
-  constructor(public name: string) {}
-  addEvent(): void {
-    throw new Error("Method not implemented.");
-  }
-  removeEvent(): void {
-    throw new Error("Method not implemented.");
-  }
-}
+let pair = new KeyValuePair<number, string>(1, "Apple");

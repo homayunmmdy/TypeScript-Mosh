@@ -236,3 +236,30 @@ class Student extends Person {
 
 let student = new Student(1, 'john', 'smith');
 ```
+
+## method overriding
+When a child class method overrides the parent class method of the same name, parameters and return type
+
+```javascript
+class Person {
+  constructor(public firstName: string, public lastName: string) {}
+
+  get fullName() {
+    return this.firstName + " " + this.lastName;
+  }
+
+  walk() {
+    console.log("walking");
+  }
+}
+
+class Teacher extends Person {
+  override get fullName() {
+    return 'Professor' + ' ' + super.fullName;
+  }
+}
+
+let teacher = new Teacher('John','Smith')
+console.log(teacher.fullName)
+
+```

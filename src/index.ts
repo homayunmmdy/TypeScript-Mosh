@@ -1,5 +1,19 @@
-class KeyValuePair<K, V> {
-  constructor(public key: K, public value: V) {}
+interface Result<T> {
+  data: T | null;
+  error: string | null;
 }
 
-let pair = new KeyValuePair<number, string>(1, "Apple");
+function fetch<T>(url: string): Result<T> {
+  return { data: null, error: null };
+}
+
+interface User {
+  username : string;
+}
+
+interface Product {
+  title : string;
+}
+
+let users = fetch<User>('url')
+let prodcuts = fetch<Product>('url')

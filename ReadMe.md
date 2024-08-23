@@ -397,13 +397,13 @@ interface Calendar {
 }
 ```
 
+# Generic
 
-# Generic 
+## generic classes
 
-# generic classes
 enable writing code that can work with a variety of data types while maintaining type safety
 
-```javascript 
+```javascript
 class KeyValuePair<K, V> {
   constructor(public key: K, public value: V) {}
 }
@@ -411,3 +411,14 @@ class KeyValuePair<K, V> {
 let pair = new KeyValuePair<number, string>(1, "Apple");
 
 ```
+
+## generic in functions
+
+```javascript
+function wrapInArray<T>(value: T) {
+  return [value];
+}
+
+let numbers = wrapInArray("1");
+```
+

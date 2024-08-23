@@ -354,3 +354,23 @@ function printNames(people: Person[]) {
   }
 }
 ```
+
+# abstract classes and method
+the concept of hiding complex implementation details and showing only the essential features or functionalities of an object or module to the user
+
+for example here Shape is like on cooked meal and most extend some where and you can't directly connect to Shape.
+```javascript 
+abstract class Shape {
+  constructor(public color: string) {}
+
+  abstract render(): void;
+}
+
+class Circle extends Shape {
+  constructor(public radius: number, color: string) {
+    super(color);
+  }
+  override render(): void {
+    console.log("Rendering a circle");
+  }
+}```

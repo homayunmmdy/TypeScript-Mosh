@@ -1,19 +1,7 @@
-interface Result<T> {
-  data: T | null;
-  error: string | null;
+interface Person {
+  name: string;
 }
 
-function fetch<T>(url: string): Result<T> {
-  return { data: null, error: null };
+function echo<T extends Person>(value: T): T {
+  return value;
 }
-
-interface User {
-  username : string;
-}
-
-interface Product {
-  title : string;
-}
-
-let users = fetch<User>('url')
-let prodcuts = fetch<Product>('url')

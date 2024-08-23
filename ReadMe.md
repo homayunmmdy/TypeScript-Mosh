@@ -445,3 +445,17 @@ let users = fetch<User>('url')
 let prodcuts = fetch<Product>('url')
 
 ```
+## generic constraints
+now the echo only set type for this interface 
+```javascript 
+
+interface Person {
+  name: string;
+}
+
+function echo<T extends Person>(value: T): T {
+  return value;
+}
+
+
+```

@@ -238,6 +238,7 @@ let student = new Student(1, 'john', 'smith');
 ```
 
 ## method overriding
+
 When a child class method overrides the parent class method of the same name, parameters and return type
 
 ```javascript
@@ -265,10 +266,10 @@ console.log(teacher.fullName)
 ```
 
 ## polymorphism
+
 flexibility allows the same function to work with various data types, promoting code reusability and versatility
 
-
-```javascript 
+```javascript
 class Person {
   constructor(public firstName: string, public lastName: string) {}
 
@@ -309,12 +310,15 @@ function printNames(people: Person[]) {
 ```
 
 # Open Closed Principle
+
 Classes should be open for extension and closed for modification.
 
 ### protected member
+
 the method or property is only accessible within the class or any class that extends it, but not externally but don't use it as much as possible.
 lik this example now everyone can access the walk that inherit the person but outside of that they don't had any accesss on it.
-```javascript 
+
+```javascript
 class Person {
   constructor(public firstName: string, public lastName: string) {}
 
@@ -356,10 +360,13 @@ function printNames(people: Person[]) {
 ```
 
 # abstract classes and method
+
 the concept of hiding complex implementation details and showing only the essential features or functionalities of an object or module to the user
 
 for example here Shape is like on cooked meal and most extend some where and you can't directly connect to Shape.
-```javascript 
+
+```javascript
+
 abstract class Shape {
   constructor(public color: string) {}
 
@@ -373,4 +380,19 @@ class Circle extends Shape {
   override render(): void {
     console.log("Rendering a circle");
   }
-}```
+}
+
+```
+
+# interface
+
+a feature of TypeScript that allows us to define the structure or shape of an object and specify the properties and methods that an object has or should have.
+in situation where they are algorithm provided and you need to extend the best chose is abstract but for shorter we can use interface here is the example
+
+```javascript
+interface Calendar {
+  name: string;
+  addEvent(): void;
+  removeEvent(): void;
+}
+```

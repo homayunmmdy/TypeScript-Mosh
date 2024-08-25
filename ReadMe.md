@@ -501,8 +501,7 @@ class ProductStore extends Store<Product> {
 ## keyof type
 used to derive new types from an existing object type's keys
 
-````javascript 
-
+```javascript 
 interface Product {
   name: string;
   price: number;
@@ -525,4 +524,22 @@ class Store<T> {
 let store = new Store<Product>();
 store.add({ name: "a", price: 1 });
 store.find('price', 1)
+
+```
+
+## type mapping 
+Let you create a change in an existing type also typescript 
+have lot's rebuildl of this called Utility Types and you can check
+theme in their website
+
+```javascript 
+interface Product {
+  name: string;
+  price: number;
+}
+
+type ReadOnlyProducts = {
+  readonly [K in keyof Product]: Product[K]
+}
+
 ```

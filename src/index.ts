@@ -9,23 +9,14 @@ class Store<T> {
   add(obj: T): void {
     this._objects.push(obj);
   }
-}
 
-// Pass on the generic type parameter
-class CompressibleStore<T> extends Store<T> {
-  compress() {}
-}
-
-// Restric the generic type parameter
-class SearchableStore<T extends { name: string }> extends Store<T> {
-  find(name: string): T | undefined {
-    return this._objects.find((obj) => obj.name === name);
+  // T is Product
+  // keyof T => 'name' | 'price'
+  find(property: keyof T, value: unknown): T | undefined {
+    return this._objects.find((obj) => obj[property] === value);
   }
 }
 
-// Fix the generic tyep parameter
-class ProductStore extends Store<Product> {
-  filterByCategory(category: string): Product[] {
-    return [];
-  }
-}
+let store = new Store<Product>();
+store.add({ name: "a", price: 1 });
+store.find('price', 1)

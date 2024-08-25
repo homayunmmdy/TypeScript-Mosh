@@ -1,9 +1,7 @@
-interface Product {
-  name: string;
-  price: number;
+function Component(constructor: Function) {
+  console.log("Components decorator called");
+  constructor.prototype.uniqueId = Date.now();
+  constructor.prototype.insertInDOM = () => {
+    console.log("Insertign the components in the DOM")
+  }
 }
-
-type ReadOnly<T> = {
-  readonly [K in keyof T]: T[K]
-}
-

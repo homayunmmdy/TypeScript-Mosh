@@ -1,6 +1,4 @@
-import * as Shapes from "./shapes";
-import Store from "./storage";
+import { Circle, Squre } from "./shapes";
 
-let circle = new Shapes.Circle(1);
-let squre = new Shapes.Squre(2);
-let store = new Store();
+let circel = new Circle(1);
+let squre = new Squre(1);

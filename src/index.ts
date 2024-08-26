@@ -1,4 +1,4 @@
-import { Circle, Squre } from "./shapes";
+import { calculateTax } from "./tax";
 
-let circel = new Circle(1);
-let squre = new Squre(1);
+let tax = calculateTax(1000);
+console.log(tax);

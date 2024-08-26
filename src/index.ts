@@ -1,5 +1,5 @@
 import { Circle } from "./shapes";
+import Store from "./storage";
 
 let circle = new Circle(1);
-console.log(circle)
-
+let store =  new Store()

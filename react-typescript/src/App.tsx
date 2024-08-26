@@ -1,10 +1,13 @@
+import ReminderList from "./components/ReminderList";
+import Reminder from "./models/Reminder";
 
+const reminders: Reminder[] = [{ id: 1, title: "Reminder 1" }];
 const App = () => {
   return (
     <>
-    <button className="btn btn-primary">Click Me</button>
+      <ReminderList items={reminders} />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

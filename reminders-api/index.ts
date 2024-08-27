@@ -3,6 +3,8 @@ import reminders from "./routers/reminders";
 
 const app = express();
 
+app.use(express.json());
+
 app.use("/reminders", reminders);
 
 app.get("/", (req, res) => {

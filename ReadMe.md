@@ -1,4 +1,4 @@
-## The Ultimate TypeScript Course – Learning Notes
+## The Ultimate TypeScript 
 ![Screenshot 2025-05-22 181631](https://github.com/user-attachments/assets/dc0f1a68-5366-47db-bd51-9f7aa5dd6c5d)
 
 
@@ -25,3 +25,8 @@ Key topics covered:
 ### 💡 Why I Took This Course
 
 As a frontend developer working with TypeScript in modern projects, I took this course to **strengthen my foundational knowledge and confidently apply TypeScript at scale**. It helped me better understand how to leverage TypeScript’s powerful type system to catch bugs early, enforce code contracts, and improve project maintainability—especially in React environments.
+
+### 📢 Note on Course Access
+Due to international sanctions in Iran, I was unable to access the official Code With Mosh platform directly. I obtained the course through a third-party distributor and completed it in full. While I do not have an official certificate, I carefully followed all course content and documented my learning here.
+
+For courses that included hands-on projects, the completed work is available in this repository. For others that were more theory-focused, I’ve included comprehensive notes, summaries, and all relevant materials as evidence of completion and understanding.
